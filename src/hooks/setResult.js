@@ -22,7 +22,7 @@ export const usePublishResult = (resultData) => {
     (async () => {
         try {
             if(result !== ([]) && !username) throw new Error("Couldn't get Result");
-            await postServerData(`${process.env.https://backend-1-e5z2.onrender.com}/api/result`, resultData, data => data)
+            await postServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/result`, resultData, data => data)
         } catch (error) {
             console.log(error)
         }
